@@ -8,6 +8,8 @@
 .header {
 
     &__container {
+    border-bottom: 1px solid silver;
+
     }
 
     &__nav {
@@ -20,7 +22,7 @@
     &__list-container {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 3rem;
     }
 
     &__logo {
@@ -42,6 +44,13 @@
     }
 
     &__nav-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 10px 15px; 
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
     }
 }
 
