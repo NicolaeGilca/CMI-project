@@ -5,6 +5,13 @@
   padding: 0;
 }
 
+:root {
+  --second-bg-color: #F8F8F8;
+  --accent-color: #ffbd08;
+  --btn-accent-color: #4e4e4e;
+  --accent-color-hover: #3a3a3a;
+}
+
 /* Document
    ========================================================================== */
 /**
@@ -22,7 +29,11 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  font-family: "Roboto" serif;
+  font-family: "Roboto", serif;
+}
+
+p {
+  font-size: 14px;
 }
 
 /**
@@ -329,10 +340,16 @@ template {
   padding: 0 25px;
 }
 
+.header {
+  background-color: var(--second-bg-color);
+}
 .header__container {
   border-bottom: 1px solid silver;
+  padding: 10px 0;
 }
 .header__nav {
+  font-size: 14px;
+  font-weight: 400;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -341,12 +358,24 @@ template {
 .header__list-container {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
+}
+.header__logo img {
+  border-radius: 50px;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 .header__list {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+}
+.header__list-item {
+  transition: 0.2s ease-in-out;
+  letter-spacing: 0.5px;
+}
+.header__list-item:hover {
+  color: var(--accent-color);
 }
 .header__list-contact {
   display: flex;
@@ -355,10 +384,22 @@ template {
 }
 .header__nav-btn {
   display: flex;
+  font-weight: 600;
+  color: var(--btn-accent-color);
   align-items: center;
   gap: 0.5rem;
-  padding: 10px 15px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 20px;
+  background-color: var(--accent-color);
+  transition: 0.2s ease-in-out;
+}
+.header__nav-btn:hover {
+  background-color: var(--accent-color-hover);
+  color: var(--second-bg-color);
+}
+
+.item-contact {
+  font-size: 18px;
 }/*# sourceMappingURL=main.css.map */

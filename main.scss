@@ -7,14 +7,17 @@
     padding: 0 25px;
 }
 .header {
-
-
+    background-color: var(--second-bg-color);
     &__container {
     border-bottom: 1px solid silver;
+    padding: 10px 0;
+
 
     }
 
     &__nav {
+        font-size: 14px;
+        font-weight: 400;
         display: flex;
         align-items: center;
         gap: 1rem;
@@ -24,19 +27,32 @@
     &__list-container {
         display: flex;
         align-items: center;
-        gap: 3rem;
+        gap: 2rem;
     }
 
     &__logo {
+        
+        img {
+        border-radius: 50px;
+        width: 3.5rem;
+        height: 3.5rem;
+        }
     }
 
     &__list {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     &__list-item {
+        transition: 0.2s ease-in-out;
+        letter-spacing: 0.5px;
+
+            &:hover {
+                color: var(--accent-color);
+            }
+        
     }
 
     &__list-contact {
@@ -47,20 +63,25 @@
 
     &__nav-btn {
         display: flex;
+        font-weight: 600;
+        color: var(--btn-accent-color);
         align-items: center;
         gap: 0.5rem;
-        padding: 10px 15px; 
+        padding: 10px 20px; 
         border: none;
         cursor: pointer;
         border-radius: 20px;
+        background-color: var(--accent-color);
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            background-color: var( --accent-color-hover);
+            color: var(--second-bg-color);
+        }
     }
 }
-
-.item {
-}
-.item-link {
-}
 .item-contact {
+    font-size: 18px;
 }
 
 

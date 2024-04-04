@@ -4,6 +4,13 @@
     margin: 0;
     padding: 0;
 }
+:root {
+  --second-bg-color: #F8F8F8;
+  --accent-color: #ffbd08;
+  --btn-accent-color: #4e4e4e;
+  --accent-color-hover: #3a3a3a;
+
+}
 /* Document
    ========================================================================== */
 
@@ -25,7 +32,11 @@
    */
   
   body {
-    font-family:"Roboto" serif;
+    font-family:"Roboto", serif;
+  }
+  p {
+    font-size: 14px;
+
   }
   
   /**
