@@ -21,6 +21,10 @@ html {
 /**
  * Remove the margin in all browsers.
  */
+body {
+  font-family: "Roboto" serif;
+}
+
 /**
  * Render the `main` element consistently in IE.
  */
@@ -322,6 +326,7 @@ template {
   max-width: 100%;
   width: 1200px;
   margin: 0 auto;
+  padding: 0 25px;
 }
 
 .header__container {
