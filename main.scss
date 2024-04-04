@@ -1,1 +1,55 @@
 @import "scss/normalize";
+//header section
+._container {
+    max-width: 100%;
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+
+    &__container {
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    &__list-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__logo {
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__list-item {
+    }
+
+    &__list-contact {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__nav-btn {
+    }
+}
+
+.item {
+}
+.item-link {
+}
+.item-contact {
+}
+
+

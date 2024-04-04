@@ -316,4 +316,32 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+._container {
+  max-width: 100%;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.header__list-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header__list-contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }/*# sourceMappingURL=main.css.map */
