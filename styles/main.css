@@ -8,8 +8,10 @@
 :root {
   --second-bg-color: #F8F8F8;
   --accent-color: #ffbd08;
+  --accent-color-blue: #1f3a80;
   --btn-accent-color: #4e4e4e;
   --accent-color-hover: #3a3a3a;
+  --text-color:#141511;
 }
 
 /* Document
@@ -29,6 +31,7 @@ html {
  * Remove the margin in all browsers.
  */
 body {
+  color: var(--text-color);
   font-family: "Roboto", serif;
 }
 
@@ -49,7 +52,6 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 ul, li {
@@ -341,10 +343,14 @@ template {
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   background-color: var(--second-bg-color);
+  padding-bottom: 50px;
 }
 .header__container {
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid rgb(219, 219, 219);
   padding: 10px 0;
 }
 .header__nav {
@@ -385,7 +391,6 @@ template {
 .header__nav-btn {
   display: flex;
   font-weight: 600;
-  color: var(--btn-accent-color);
   align-items: center;
   gap: 0.5rem;
   padding: 10px 20px;
@@ -399,7 +404,69 @@ template {
   background-color: var(--accent-color-hover);
   color: var(--second-bg-color);
 }
+.header__wellcome {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+.header__desc {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.header__desc-title {
+  max-width: 35rem;
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+}
+.header__desc-title span {
+  color: var(--accent-color-blue);
+}
+.header__desc-subtitle {
+  max-width: 40rem;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.header .deco {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header__desc-deco {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+.header__desc-servise {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+.header__desc-btn {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: var(--accent-color);
+  font-weight: 600;
+}
+.header__desc-btn-first {
+  padding: 17px 27px;
+}
+.header__desc-btn-second {
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+}
+.header__picture img {
+  object-fit: cover;
+  width: 25rem;
+  height: 30rem;
+}
 
 .item-contact {
-  font-size: 18px;
+  font-size: 20px;
+}
+
+main {
+  height: 100vh;
 }/*# sourceMappingURL=main.css.map */
