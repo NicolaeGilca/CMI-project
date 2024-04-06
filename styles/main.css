@@ -33,6 +33,7 @@ html {
 body {
   color: var(--text-color);
   font-family: "Roboto", serif;
+  overflow-x: hidden;
 }
 
 p {
@@ -404,7 +405,7 @@ template {
   background-color: var(--accent-color-hover);
   color: var(--second-bg-color);
 }
-.header__wellcome {
+.header__welcome {
   display: flex;
   align-self: center;
   justify-content: space-between;
@@ -457,10 +458,18 @@ template {
   background-color: transparent;
   border: 2px solid var(--text-color);
 }
+.header .header__btn-item {
+  display: flex;
+  gap: 1rem;
+}
+.header__picture {
+  position: relative;
+}
+.header__picture .haeder__picture-main {
+  width: 35rem;
+}
 .header__picture img {
-  object-fit: cover;
-  width: 25rem;
-  height: 30rem;
+  width: 100%;
 }
 
 .item-contact {

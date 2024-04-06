@@ -85,7 +85,7 @@
 
     //haeader description 
 
-    &__wellcome {
+    &__welcome {
         display: flex;
         align-self: center;
         justify-content: space-between;
@@ -150,13 +150,24 @@
         background-color: transparent;
         border: 2px solid var(--text-color);
     }
+    .header__btn-item {
+        display: flex;
+        gap: 1rem;
+    }
 
     &__picture {
-        img {
-            object-fit: cover;
-            width: 25rem;
-            height: 30rem;
+        position: relative;
+
+        .haeder__picture-main {
+       width: 35rem;
+
         }
+        
+        img {
+            
+            width: 100%;
+        }
+
     }
 }
 .item-contact {
