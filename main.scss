@@ -1,20 +1,17 @@
 @import "scss/normalize";
 //header section
-._container {
-    max-width: 100%;
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 25px;
-}
+
 .header {
     display: flex;
     flex-direction: column;
     gap: 60px;
     background-color: var(--second-bg-color);
-    padding-bottom: 50px;
+    padding: clamp(0.625rem, 0.08rem + 2.73vw, 2.5rem) 0;
+
     &__container {
     border-bottom: 1px solid rgb(219, 219, 219) ;
-    padding: 10px 0;
+    padding: 0 clamp(0.625rem, 0.08rem + 2.73vw, 2.5rem);
+
 
 
     }
@@ -105,7 +102,7 @@
     &__desc-title {
         max-width: 35rem;
         font-weight: 700;
-        font-size: 3.5rem;
+        font-size: clamp(1.875rem, 1.548rem + 1.64vw, 3rem);
         margin-bottom: 30px;
 
         span {
@@ -126,9 +123,7 @@
         gap: 0.5rem;
     }
 
-    &__desc-deco {
-        @include desc-yellow-prop;
-    }
+  
 
     &__desc-servise {
        @include title-small-accent;
@@ -140,15 +135,24 @@
         padding: 15px 25px; 
         background-color: var(--accent-color);
         font-weight: 600;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            background-color: var( --accent-color-hover);
+            color: var(--second-bg-color);
+        }
     }
     &__desc-btn-first {
         padding: 17px 27px; 
+        
 
         
     }
     &__desc-btn-second {
+        
         background-color: transparent;
         border: 2px solid var(--text-color);
+        
     }
     .header__btn-item {
         display: flex;
@@ -157,24 +161,83 @@
 
     &__picture {
         position: relative;
+        
 
         .haeder__picture-main {
-       width: 35rem;
-
-        }
-        
-        img {
-            
+            width: 35rem;
             width: 100%;
-        }
 
+        }
     }
 }
 .item-contact {
     font-size: 20px;
 }
 
+//main 
 
 main {
-    height: 100vh;
+    &__services {
+    }
+}
+
+//sections 
+
+.services {
+    padding: clamp(0.625rem, 0.08rem + 2.73vw, 2.5rem) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+		gap: clamp(2rem, -2.799rem + 2.44vw, 4.688rem) 0;
+
+
+    }
+
+    &__text {
+        max-width: 50em;
+        color: var(--text-color);
+        font-size: 16px;
+    }
+
+
+    &__bottom {
+
+    }
+
+    &__bottom-list {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+}
+
+.bottom-list {
+
+    &__item {
+        padding: 20px 30px;
+        width:20rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+        box-shadow: 1px 1px 15px #cccccc;
+    }
+
+    &__item-icon {
+        font-size: 35px;
+        color: var(--accent-color);
+    }
+
+    &__item-title {
+    }
+
+    &__item-subtitle {
+    }
 }

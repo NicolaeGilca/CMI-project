@@ -10,15 +10,37 @@
   --accent-color-blue: #1f3a80;
   --btn-accent-color: #4e4e4e;
   --accent-color-hover: #3a3a3a;
-  --text-color:#141511;
+  --text-color:#323232;
 
 }
-@mixin desc-yellow-prop {
+* img {
+	max-width: 100%;
+}
+._container {
+  max-width: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+._title {
+  font-size: clamp(1rem, 1rem + 1vw, 2rem);
+}
+._small-title {
+  font-size: clamp(0.8rem, 0.8rem + 1.2vw, 1.5rem);
+}
+._text {
+  font-size: clamp(0.8rem, 0.8rem + 0.8vw, 0.5rem);
+}
+
+
+
+.deco-yellow {
   display: block;
   width: 40px;
   height: 3px;
   background-color: var(--accent-color);
 }
+
 @mixin title-small-accent {
   font-weight: 600;
   color: var(--accent-color);
