@@ -23,13 +23,24 @@
   padding: 0 25px;
 }
 ._title {
+  font-weight: 600;
   font-size: clamp(1rem, 1rem + 1vw, 2rem);
 }
 ._small-title {
+  font-weight: 600;
   font-size: clamp(0.8rem, 0.8rem + 1.2vw, 1.5rem);
 }
+._title-section {
+  color: var(--accent-color);
+  font-size: 16px;
+  font-weight: 600;
+
+}
 ._text {
-  font-size: clamp(0.8rem, 0.8rem + 0.8vw, 0.5rem);
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--text-color);
+  font-size: clamp(1rem, 1rem + 1vw, 0.5rem);
 }
 
 
@@ -40,10 +51,39 @@
   height: 3px;
   background-color: var(--accent-color);
 }
+@mixin padding-section {
+  padding: clamp(0.625rem, 0.08rem + 2.73vw, 2.5rem) 0;
+
+}
 
 @mixin title-small-accent {
   font-weight: 600;
   color: var(--accent-color);
+}
+@mixin btn-standart {
+  display: inline-block;
+        padding: 15px 25px; 
+        background-color: var(--accent-color);
+        font-weight: 600;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            background-color: var( --accent-color-hover);
+            color: var(--second-bg-color);
+        }
+}
+@mixin btn-second-standart {
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  display: inline-block;
+        padding: 15px 25px; 
+        font-weight: 600;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            background-color: var( --accent-color-hover);
+            color: var(--second-bg-color);
+        }
 }
 /* Document
    ========================================================================== */
@@ -70,10 +110,7 @@
     font-family:"Roboto", serif;
     overflow-x: hidden;
   }
-  p {
-    font-size: 14px;
 
-  }
   
   /**
    * Render the `main` element consistently in IE.
