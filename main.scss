@@ -395,6 +395,106 @@ main {
         width: 60%;
     }
 }
+// steps section 
+.steps {
+
+    &__container {
+    }
+
+    &__top {
+    }
+
+    &__title {
+        padding: 1rem 0;
+        width: 20rem;
+    }
+
+    &__btn {
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__item {
+        display: flex;
+        border-bottom: 1px solid silver;
+        gap: 5rem;
+        padding: 2rem 0;
+    }
+
+    &__num {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    &__info {
+        font-size: 20px;
+    }
+
+    &__desc {
+    }
+
+    &__deco-img {
+        max-width: 100%;
+        width: 80rem;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+//testionials section
+.testiomonials {
+
+    &__opinion-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__opinion-item {
+        width: 25rem;
+        padding: 20px;
+        background-color: var(--accent-color);
+        margin: 1rem;
+    }
+}
+.opinion-item {
+
+    &__content {
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+
+    &__client {
+    }
+
+    &__client-img {
+    }
+
+    &__client-info {
+    }
+
+    &__client-name {
+    }
+
+    &__client-location {
+    }
+}
+
 
 
 
