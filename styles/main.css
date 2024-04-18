@@ -698,6 +698,7 @@ main section {
   border-bottom: 1px solid silver;
   gap: 5rem;
   padding: 2rem 0;
+  align-items: baseline;
 }
 .steps__num {
   display: block;
@@ -758,7 +759,24 @@ main section {
   gap: 1rem;
   flex-direction: column;
 }
+.opinion-item__client {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.opinion-item__client-img {
+  border-radius: 50px;
+  width: 3rem;
+  height: 3rem;
+}
 .opinion-item__client-info {
   display: flex;
   flex-direction: column;
+}
+.opinion-item__client-name {
+  font-weight: 600;
+  padding-bottom: 0.3rem;
+}
+.opinion-item__client-location {
+  color: rgb(113, 113, 113);
 }/*# sourceMappingURL=main.css.map */

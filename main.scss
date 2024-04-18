@@ -337,9 +337,6 @@ main {
     width: 20rem;
   }
 
-  &__btn {
-  }
-
   &__bottom {
     display: flex;
     align-items: center;
@@ -357,6 +354,8 @@ main {
     border-bottom: 1px solid silver;
     gap: 5rem;
     padding: 2rem 0;
+    align-items: baseline;
+
   }
 
   &__num {
@@ -444,10 +443,16 @@ main {
     }
 
     &__client {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
     }
 
     &__client-img {
-    }
+      border-radius: 50px;
+      width: 3rem;
+      height: 3rem;
+      }
 
     &__client-info {
         display: flex;
@@ -456,8 +461,11 @@ main {
     }
 
     &__client-name {
+      font-weight: 600;
+      padding-bottom: 0.3rem;
     }
 
     &__client-location {
+      color: rgb(113, 113, 113);
     }
 }
