@@ -476,8 +476,10 @@ template {
   cursor: pointer;
 }
 .header__desc-btn {
+  border: none;
+  cursor: pointer;
   display: inline-block;
-  padding: 15px 25px;
+  padding: 17px 27px;
   background-color: var(--accent-color);
   font-weight: 600;
   transition: 0.2s ease-in-out;
@@ -486,12 +488,18 @@ template {
   background-color: var(--accent-color-hover);
   color: var(--second-bg-color);
 }
-.header__desc-btn-first {
-  padding: 17px 27px;
-}
 .header__desc-btn-second {
+  cursor: pointer;
   background-color: transparent;
-  border: 2px solid silver solid var(--text-color);
+  border: 2px solid var(--text-color);
+  display: inline-block;
+  padding: 15px 25px;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+.header__desc-btn-second:hover {
+  background-color: var(--accent-color-hover);
+  color: var(--second-bg-color);
 }
 .header .header__btn-item {
   display: flex;
@@ -503,6 +511,20 @@ template {
 }
 .header__picture .haeder__picture-main {
   width: 100%;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1s;
+}
+
+.show {
+  transition: all 1s;
+  filter: blur(0);
+  transform: translate(0);
+  opacity: 1;
 }
 
 .item-contact {
@@ -581,6 +603,9 @@ main section {
   width: 100%;
 }
 
+.works {
+  background-color: var(--second-bg-color);
+}
 .works img {
   width: 100%;
   object-fit: cover;
@@ -681,6 +706,33 @@ main section {
   width: 60%;
 }
 
+.offer__btn {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 17px 27px;
+  background-color: var(--accent-color);
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+.offer__btn:hover {
+  background-color: var(--accent-color-hover);
+  color: var(--second-bg-color);
+}
+.offer__btn-sevices {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  display: inline-block;
+  padding: 15px 25px;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+.offer__btn-sevices:hover {
+  background-color: var(--accent-color-hover);
+  color: var(--second-bg-color);
+}
+
 .steps__title {
   padding: 1rem 0;
   width: 20rem;
@@ -715,6 +767,53 @@ main section {
 }
 .steps__deco-img img {
   width: 100%;
+}
+
+.offer {
+  padding: 80px 0;
+  background-color: #003466;
+  color: white;
+}
+.offer__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.offer__text {
+  font-size: 1.5rem;
+}
+.offer__buttons {
+  color: black;
+  display: flex;
+  gap: 1rem;
+}
+.offer__btn {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 17px 27px;
+  background-color: var(--accent-color);
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+.offer__btn:hover {
+  background-color: var(--accent-color-hover);
+  color: var(--second-bg-color);
+}
+.offer__btn-services {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  display: inline-block;
+  padding: 15px 25px;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+  color: white;
+  border: 2px solid white;
+}
+.offer__btn-services:hover {
+  background-color: var(--accent-color-hover);
+  color: var(--second-bg-color);
 }
 
 .testiomonials {
@@ -786,14 +885,15 @@ main section {
 .footer {
   position: relative;
   margin-top: 10rem;
+  gap: 5rem;
+  padding: 8rem 0 1rem 0;
   background-color: var(--accent-color-blue);
   color: white;
   position: relative;
-  height: 25rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 .footer__contacts {
   position: absolute;
@@ -847,4 +947,45 @@ main section {
 .footer .footer__bottom-side .footer__bottom-wrrapper {
   display: flex;
   justify-content: space-around;
+}
+.footer__bottom-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+}
+.footer__bottom-logo img {
+  border-radius: 50px;
+}
+.footer__logo-title {
+  font-size: 14px;
+}
+.footer__bottom-list {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer__bottom-title {
+  margin-bottom: 1rem;
+}
+.footer__bottom-items {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 5rem;
+}
+.footer__up-btn {
+  cursor: pointer;
+  font-size: 26px;
+}
+.footer__up-btn i {
+  transition: 0.2s ease-in-out;
+  background-color: var(--accent-color);
+  padding: 1.5rem;
+}
+.footer__up-btn i:hover {
+  background-color: var(--text-color);
 }/*# sourceMappingURL=main.css.map */
