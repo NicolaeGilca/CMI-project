@@ -67,45 +67,49 @@
           </div>
         </nav>
       </div>
-      <div class="header__welcome">
-        <div class="header__welcome _container">
-          <div class="header__desc">
-            <div class="header__desc-item deco">
-              <span class="header__desc-deco deco-yellow"></span>
-              <span class="header__desc-servise">Roof constructions</span>
-            </div>
-            <div class="header__desc-item">
-              <h1 class="header__desc-title">
-                Welcome to <span>Construction Maisons Individuelles</span>
-              </h1>
-              <p class="header__desc-subtitle _text">
-                We specialize in the construction and renovation of roofs,
-                offering professional and customized solutions for your needs.
-                With a dedicated team and extensive experience in the field, we
-                are committed to delivering the highest quality work, ensuring
-                durability and aesthetics in every project.
-              </p>
-            </div>
-            <div class="header__desc-item header__btn-item">
-              <a class="header__desc-btn header__desc-btn-first" href="#"
-                >Find Out More</a
-              >
-              <a class="header__desc-btn header__desc-btn-second" href="#"
-                >All Services</a
-              >
-            </div>
-          </div>
-          <div class="header__picture">
-            <img
-              class="haeder__picture-main"
-              src="./images/header/deco.svg"
-              alt="roof-worker"
-            />
-          </div>
-        </div>
-      </div>
     </header>
     <main class="main">
+      <section class="main__welcome welcome">
+        <div class="welcome__hero">
+          <div class="welcome__container _container">
+            <div class="welcome__desc">
+              <div class="welcome__desc-item deco">
+                <span class="welcome__desc-deco deco-yellow"></span>
+                <span class="welcome__desc-servise">Roof constructions</span>
+              </div>
+              <div class="welcome__desc-item">
+                <h1 class="welcome__desc-title">
+                  Welcome to <span>Construction Maisons Individuelles</span>
+                </h1>
+                <p class="welcome__desc-subtitle _text">
+                  We specialize in the construction and renovation of roofs,
+                  offering professional and customized solutions for your needs.
+                  With a dedicated team and extensive experience in the field,
+                  we are committed to delivering the highest quality work,
+                  ensuring durability and aesthetics in every project.
+                </p>
+              </div>
+              <div class="welcome__desc-item welcome__btn-item">
+                <a class="welcome__desc-btn welcome__desc-btn-first" href="#"
+                  >Find Out More</a
+                >
+                <a class="welcome__desc-btn welcome__desc-btn-second" href="#"
+                  >All Services</a
+                >
+              </div>
+            </div>
+            <div class="welcome__picture">
+              <div class="welcome__img-deco">
+                <img src="/images/header/deco/bg-deco.svg" alt="deco-bg" />
+              </div>
+              <div class="welcome__img-worker">
+                <img src="/images/header/deco/worker.svg" alt="worker" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="main__services services">
         <div class="services _container">
           <div class="services__top">
@@ -116,7 +120,6 @@
             <p class="services__text _text">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Accusantium libero optio facere deserunt. Sint maiores blanditiis
-              maxime id assumenda, ex ut deserunt cumque nesciunt fugiat dolorum
               repellat, molestiae omnis asperiores aspernatur perspiciatis atque
               consequuntur doloremque.
             </p>
@@ -187,6 +190,20 @@
           </div>
         </div>
       </section>
+      <section class="main__offer offer">
+        <div class="offer__container _container">
+          <div class="offer__text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+              Dolor a quo at ut quidem iusto!
+            </p>
+          </div>
+          <div class="offer__buttons">
+            <a class="offer__btn" href="#">Get a quote</a>
+            <a class="offer__btn-services" href="#">Our services</a>
+          </div>
+        </div>
+      </section>
       <section class="main__works works">
         <div class="works__container _container">
           <div class="works__presetation-top">
@@ -251,7 +268,10 @@
             <h3 class="steps__title _title">
               Examine our process's opertation.
             </h3>
-            <div class="steps__btn"></div>
+            <div class="steps__btns">
+              <a class="steps__btn-quote" href="#">Get a quote</a>
+              <a class="steps__btn-learn" href="#">Learn more</a>
+            </div>
           </div>
           <div class="steps__bottom">
             <ul class="steps__list">
@@ -298,17 +318,72 @@
           </div>
         </div>
       </section>
-      <section class="main__offer offer">
-        <div class="offer__container _container">
-          <div class="offer__text">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
-              Dolor a quo at ut quidem iusto!
-            </p>
+      <section class="main__news news">
+        <div class="news__container _container">
+          <div class="news__top">
+            <h3 class="news__title _title">Latest news</h3>
+            <a href="#" class="news__btn">View all</a>
           </div>
-          <div class="offer__buttons">
-            <a class="offer__btn" href="#">Get a quote</a>
-            <a class="offer__btn-services" href="#">Our services</a>
+          <div class="news__bottom">
+            <ul class="news__list">
+              <li class="news__item item-card">
+                <img
+                  class="item-card__img"
+                  src="./images/main/news/house.webp"
+                  alt="news-img"
+                  width="400"
+                  height="250"
+                />
+                <div class="item-card__desc">
+                  <div>
+                    <span class="item-card__date">18/June/2023</span>
+                    <span class="item-card__tag">Development</span>
+                  </div>
+
+                  <h3 class="item-card__title">
+                    Superb floor tiles improve the look of your house
+                  </h3>
+                </div>
+              </li>
+              <li class="news__item item-card">
+                <img
+                  class="item-card__img"
+                  src="./images/main/news/house.webp"
+                  alt="news-img"
+                  width="400"
+                  height="250"
+                />
+                <div class="item-card__desc">
+                  <div>
+                    <span class="item-card__date">18/June/2023</span>
+                    <span class="item-card__tag">Development</span>
+                  </div>
+
+                  <h3 class="item-card__title">
+                    Superb floor tiles improve the look of your house
+                  </h3>
+                </div>
+              </li>
+              <li class="news__item item-card">
+                <img
+                  class="item-card__img"
+                  src="./images/main/news/house.webp"
+                  alt="news-img"
+                  width="400"
+                  height="250"
+                />
+                <div class="item-card__desc">
+                  <div>
+                    <span class="item-card__date">18/June/2023</span>
+                    <span class="item-card__tag">Development</span>
+                  </div>
+
+                  <h3 class="item-card__title">
+                    Superb floor tiles improve the look of your house
+                  </h3>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -463,9 +538,6 @@
                   src="./images/header/logotype.jpg"
                   alt="logo"
                 />
-                <h2 class="footer__logo-title">
-                  Construction Maisons Individuelles
-                </h2>
               </a>
               <ul class="footer__bottom-list">
                 <div class="footer__bottom-title"><h4>Navigation</h4></div>
@@ -487,14 +559,33 @@
                 <li class="footer__bottom-item">contact@gamil.com</li>
                 <li class="footer__bottom-item">+(212)123 124 234</li>
               </ul>
-              <div class="footer__up-btn">
+              <div id="myBtn" class="footer__up-btn" onclick="topFunction()">
                 <i class="fa-solid fa-arrow-up"></i>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <p>HTML entity: &copy;</p>
+      <div class="footer__bottom-notation">
+        <p>HTML entity: &copy;</p>
+        <ul class="footer__list-contacts">
+          <li class="footer__list-contact item-contact">
+            <a href="#" class="item-link"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </li>
+          <li class="footer__list-contact item-contact">
+            <a href="#" class="item-link"
+              ><i class="fa-brands fa-square-instagram"></i
+            ></a>
+          </li>
+          <li class="footer__list-contact item-contact">
+            <a href="#" class="item-link"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
     </footer>
     <script src="./main.js"></script>
     <script

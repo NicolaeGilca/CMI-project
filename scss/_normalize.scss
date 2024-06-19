@@ -5,12 +5,13 @@
   padding: 0;
 }
 :root {
-  --second-bg-color: #f8f8f8;
+  --second-bg-color: #f7f7f7;
   --accent-color: #ffbd08;
   --accent-color-blue: #1f3a80;
   --btn-accent-color: #4e4e4e;
   --accent-color-hover: #3a3a3a;
-  --text-color: #323232;
+  --text-color: #474747;
+  --bg-color: #fff;
 }
 * img {
   max-width: 100%;
@@ -23,7 +24,7 @@
 }
 ._title {
   font-weight: 600;
-  font-size: clamp(1rem, 1rem + 1vw, 2rem);
+  font-size: clamp(2.3rem, 1rem + 1vw, 2rem);
 }
 ._small-title {
   font-weight: 600;
@@ -35,7 +36,7 @@
   font-weight: 600;
 }
 ._text {
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.8rem;
   color: var(--text-color);
   font-size: clamp(1rem, 1rem + 1vw, 0.5rem);
@@ -48,7 +49,7 @@
   background-color: var(--accent-color);
 }
 @mixin padding-section {
-  padding: clamp(0.625rem, 0.08rem + 2.73vw, 2.5rem) 0;
+  padding: 3.5rem 0;
 }
 
 @mixin title-small-accent {
@@ -73,14 +74,14 @@
 @mixin btn-second-standart {
   cursor: pointer;
   background-color: transparent;
-  border: 2px solid var(--text-color);
+  border: 2px solid #b8b8b8;
   display: inline-block;
   padding: 15px 25px;
   font-weight: 600;
   transition: 0.2s ease-in-out;
 
   &:hover {
-    background-color: var(--accent-color-hover);
+    background-color: #b8b8b8;
     color: var(--second-bg-color);
   }
 }
@@ -108,6 +109,7 @@ body {
   color: var(--text-color);
   font-family: "Roboto", serif;
   overflow-x: hidden;
+  background-color: var(--bg-color);
 }
 
 /**
