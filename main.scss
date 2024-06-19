@@ -13,6 +13,7 @@
   background-color: var(--second-bg-color);
 
   &__container {
+    
     border-bottom: 2px solid silver solid rgb(219, 219, 219);
     padding: 0 clamp(0.625rem, 0.08rem + 2.73vw, 2.5rem);
   }
@@ -89,8 +90,17 @@
 
   //haeader description
   .welcome {
+    animation: appear s5 linear;
+    position: relative;
     background-color: var(--second-bg-color);
-  
+    z-index: 1;
+  &::after {
+    position: absolute;
+    content: url("/images/header/deco/welcome-deco.svg");
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
   &__container {
     position: relative;
     display: flex;
@@ -102,6 +112,7 @@
   }
 
   &__picture {
+   
     position: relative;
     width: 40%;
     max-width: 100%;
@@ -206,10 +217,12 @@ main {
     justify-content: center;
     gap: 3rem;
   }
+
 }
 
 .bottom-list {
   &__item {
+    @include animation-appear;
     padding: 4rem 1.5rem;
     width: 20rem;
     display: flex;
@@ -236,6 +249,7 @@ main {
   }
 
   &__desc {
+    @include animation-appear;
     width: 50%;
     display: flex;
     align-items: flex-start;
@@ -248,6 +262,7 @@ main {
   }
 
   &__image-container {
+    @include animation-rightToLeft;
     width: 50%;
   }
 
@@ -281,6 +296,7 @@ main {
   }
 
   &__desc {
+    @include animation-rightToLeft;
     padding-left: 2rem ;
     width: 40%;
     display: flex;
@@ -308,6 +324,10 @@ main {
   
     display: flex;
     gap: 1.5rem;
+  }
+
+  &__main-picture {
+    @include animation-leftToRight;
   }
 
   &__btn-quote {
@@ -347,10 +367,12 @@ main {
   }
 
   &__img-left {
+    @include animation-leftToRight;
     width: 40%;
   }
 
   &__img-right {
+    @include animation-rightToLeft;
     width: 60%;
   }
 }
@@ -378,6 +400,13 @@ main {
 
 // steps section
 .steps {
+  position: relative;
+  z-index: 9;
+  &::after {
+    content: url("/images/main/steps/steps-deco.svg");
+    right: 0;bottom: 0;position: absolute;
+    z-index: 0;
+  }
   &__title {
     padding: 1rem 0;
   }
@@ -414,6 +443,7 @@ main {
   }
 
   &__item {
+    @include animation-leftToRight;
     display: flex;
     border-bottom: 1px solid silver;
     gap: 5rem;
@@ -431,10 +461,13 @@ main {
   }
 
   &__deco-img {
+    @include animation-rightToLeft;
     max-width: 100%;
     width: 80rem;
+    z-index: 9;
     img {
       width: 100%;
+     
     }
   }
 }
@@ -494,10 +527,8 @@ main {
 }
 //news section 
 .news {
-  background-color:var(--second-bg-color) ;
-
-  &__container {
-  }
+  
+  background-color:var(--second-bg-color);
 
   &__top {
     display: flex;
@@ -527,6 +558,7 @@ main {
   }
 
   &__item {
+    @include animation-appear;
     max-width: 100%;
     width: 350px;
     display: flex;
@@ -538,7 +570,7 @@ main {
 }
 
 .item-card {
-
+  
   &__img {
     object-fit: cover;
   }
@@ -684,7 +716,7 @@ main {
   &__contacts-item {
     cursor: pointer;
     color: var(--text-color);
-    box-shadow: 0 3px 2px rgb(0 0 0 / 0.1);
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
     text-align: center;
     max-width: 100%;
     width: 300px;
@@ -807,3 +839,41 @@ main {
   }
 
 }
+
+
+//animation 
+@keyframes appear {
+  
+  from{
+    opacity: 0;
+    scale: 0.5;
+  } to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes leftToRight {
+  
+  from{
+    opacity: 0;
+    transform: translateX(-100%);
+  } to {
+    opacity: 1;
+    transform: translateX(0%);
+
+  }
+}
+@keyframes rightToLeft {
+  
+  from{
+    opacity: 0;
+    transform: translateX(100%);
+  } to {
+    opacity: 1;
+    transform: translateX(0%);
+
+  }
+}
+
+

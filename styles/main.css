@@ -451,7 +451,17 @@ template {
 }
 
 .welcome {
+  animation: appear s5 linear;
+  position: relative;
   background-color: var(--second-bg-color);
+  z-index: 1;
+}
+.welcome::after {
+  position: absolute;
+  content: url("/images/header/deco/welcome-deco.svg");
+  right: 0;
+  bottom: 0;
+  z-index: 0;
 }
 .welcome__container {
   position: relative;
@@ -564,6 +574,9 @@ main section {
 }
 
 .bottom-list__item {
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0;
   padding: 4rem 1.5rem;
   width: 20rem;
   display: flex;
@@ -584,6 +597,9 @@ main section {
   gap: 5rem;
 }
 .about__desc {
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0;
   width: 50%;
   display: flex;
   align-items: flex-start;
@@ -604,6 +620,9 @@ main section {
   color: var(--second-bg-color);
 }
 .about__image-container {
+  animation: rightToLeft 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
   width: 50%;
 }
 .about__img {
@@ -629,6 +648,9 @@ main section {
   width: 70%;
 }
 .works__desc {
+  animation: rightToLeft 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
   padding-left: 2rem;
   width: 40%;
   display: flex;
@@ -651,6 +673,11 @@ main section {
 .works__desc-buttons {
   display: flex;
   gap: 1.5rem;
+}
+.works__main-picture {
+  animation: leftToRight 1s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }
 .works__btn-quote {
   display: flex;
@@ -704,12 +731,29 @@ main section {
   gap: 1.5rem;
 }
 .works__img-left {
+  animation: leftToRight 1s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
   width: 40%;
 }
 .works__img-right {
+  animation: rightToLeft 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
   width: 60%;
 }
 
+.steps {
+  position: relative;
+  z-index: 9;
+}
+.steps::after {
+  content: url("/images/main/steps/steps-deco.svg");
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 0;
+}
 .steps__title {
   padding: 1rem 0;
 }
@@ -758,6 +802,9 @@ main section {
   gap: 2rem;
 }
 .steps__item {
+  animation: leftToRight 1s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
   display: flex;
   border-bottom: 1px solid silver;
   gap: 5rem;
@@ -772,8 +819,12 @@ main section {
   font-size: 20px;
 }
 .steps__deco-img {
+  animation: rightToLeft 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
   max-width: 100%;
   width: 80rem;
+  z-index: 9;
 }
 .steps__deco-img img {
   width: 100%;
@@ -875,6 +926,9 @@ main section {
   gap: 2rem;
 }
 .news__item {
+  animation: appear 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0;
   max-width: 100%;
   width: 350px;
   display: flex;
@@ -998,7 +1052,7 @@ main section {
 .footer__contacts-item {
   cursor: pointer;
   color: var(--text-color);
-  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
   text-align: center;
   max-width: 100%;
   width: 300px;
@@ -1093,4 +1147,34 @@ main section {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes leftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes rightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }/*# sourceMappingURL=main.css.map */

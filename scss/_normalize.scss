@@ -84,6 +84,23 @@
     background-color: #b8b8b8;
     color: var(--second-bg-color);
   }
+
+}
+
+@mixin animation-leftToRight {
+  animation: leftToRight 1s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+@mixin animation-appear {
+  animation: appear 3s linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+@mixin animation-rightToLeft {
+  animation: rightToLeft 3s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }
 /* Document
    ========================================================================== */
