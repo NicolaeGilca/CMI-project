@@ -648,9 +648,6 @@ main section {
   width: 70%;
 }
 .works__desc {
-  animation: rightToLeft 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 30%;
   padding-left: 2rem;
   width: 40%;
   display: flex;
@@ -673,11 +670,6 @@ main section {
 .works__desc-buttons {
   display: flex;
   gap: 1.5rem;
-}
-.works__main-picture {
-  animation: leftToRight 1s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 30%;
 }
 .works__btn-quote {
   display: flex;
@@ -731,15 +723,9 @@ main section {
   gap: 1.5rem;
 }
 .works__img-left {
-  animation: leftToRight 1s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 30%;
   width: 40%;
 }
 .works__img-right {
-  animation: rightToLeft 3s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 30%;
   width: 60%;
 }
 
@@ -978,7 +964,7 @@ main section {
 .testiomonials__opinion-item {
   position: relative;
   padding: 30px;
-  border: 1px solid rgba(192, 192, 192, 0.689);
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
   background-color: white;
 }
 .testiomonials__deco-bg {

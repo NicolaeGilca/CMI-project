@@ -296,7 +296,6 @@ main {
   }
 
   &__desc {
-    @include animation-rightToLeft;
     padding-left: 2rem ;
     width: 40%;
     display: flex;
@@ -327,7 +326,6 @@ main {
   }
 
   &__main-picture {
-    @include animation-leftToRight;
   }
 
   &__btn-quote {
@@ -367,12 +365,10 @@ main {
   }
 
   &__img-left {
-    @include animation-leftToRight;
     width: 40%;
   }
 
   &__img-right {
-    @include animation-rightToLeft;
     width: 60%;
   }
 }
@@ -634,7 +630,7 @@ main {
   &__opinion-item {
     position: relative;
     padding: 30px;
-    border: 1px solid rgba(192, 192, 192, 0.689);
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
     background-color: white;
   }
   &__deco-bg {
