@@ -67,6 +67,7 @@
   background-color: var(--accent-color);
   font-weight: 600;
   transition: 0.2s ease-in-out;
+  z-index: 9;
 
   &:hover {
     background-color: var(--accent-color-hover);
@@ -81,7 +82,7 @@
   padding: 15px 25px;
   font-weight: 600;
   transition: 0.2s ease-in-out;
-
+  z-index: 9;
   &:hover {
     background-color: #b8b8b8;
     color: var(--second-bg-color);

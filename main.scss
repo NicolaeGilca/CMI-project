@@ -1,4 +1,5 @@
 @import "scss/normalize";
+@import "scss/media";
 //header section
 
 .hidden {
@@ -204,9 +205,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  &__text {
-    max-width: 40vw;
-  }
+
   &__top {
     display: flex;
     align-items: center;
@@ -375,36 +374,17 @@ main {
     width: 60%;
   }
 }
-//offer section 
-
-
-// .offer {
-
-//   &__container {
-//   }
-
-//   &__text {
-//   }
-
-//   &__buttons {
-//   }
-
-//   &__btn {
-//     @include btn-standart;
-//   }
-//   &__btn-sevices {
-//     @include btn-second-standart;
-//   }
-// }
 
 // steps section
+
 .steps {
   position: relative;
-  z-index: 9;
   &::after {
     content: url("/images/main/steps/steps-deco.svg");
-    right: 0;bottom: 0;position: absolute;
-    z-index: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
   }
   &__title {
     padding: 1rem 0;
@@ -498,13 +478,14 @@ main {
 
   &__container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 
   &__text {
-    z-index: 10;
+    z-index: 9;
     font-size: 1.5rem;
+    max-width: 55%;
   }
 
   &__buttons {
@@ -571,7 +552,11 @@ main {
 .item-card {
   
   &__img {
+    img {
+      width: 100%;
     object-fit: cover;
+
+    }
   }
 
   &__desc {
