@@ -7,3 +7,17 @@ window.onscroll=()=> {
         let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
 })}
+
+
+//menu 
+
+const menuIconBtn = document.getElementById("menu");
+const navigationList = document.getElementById("navigation");
+
+
+menuIconBtn.addEventListener("click", ()=> {
+    navigationList.classList.toggle("active");
+    menuIconBtn.classList.toggle("active")
+    
+})
+
