@@ -19,12 +19,12 @@ menuIconBtn.addEventListener("click", ()=> {
     navigationList.classList.toggle("active");
     menuIconBtn.classList.toggle("active")
 
-    if(menuIconBtn.classList.contains("active")) {
-        document.body.style.overflowY = "hidden"
+    // if(menuIconBtn.classList.contains("active")) {
+    //     document.body.style.overflowY = "hidden"
         
-    }else {
-         document.body.style.overflowY = "scroll"
-    }
+    // }else {
+    //      document.body.style.overflowY = "scroll"
+    // }
    
     
 })

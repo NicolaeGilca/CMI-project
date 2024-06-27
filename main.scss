@@ -8,16 +8,15 @@
 
 .header {
   position: sticky;
-  z-index:100;
   top: 0;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
   background-color: var(--second-bg-color);
+  z-index:9;
 
   &__container {
-    
     display: flex; 
     justify-content: space-between;
     padding: 0 clamp(0.625rem, 0.08rem + 2.73vw, 2.5rem);
@@ -100,13 +99,13 @@
 
   //haeader description
   .welcome {
-    animation: appear s5 linear;
+    
     position: relative;
     background-color: var(--second-bg-color);
     z-index: 1;
   &::after {
     position: absolute;
-    content: url("/images/header/deco/welcome-deco.svg");
+    content: url("./images/header/deco/welcome-deco.svg");
     right: 0;
     bottom: 0;
     z-index: 0;
@@ -476,7 +475,7 @@ main {
   }
   &::after{
     position: absolute;
-    content: url("/images/main/offer/deco-offer2.svg");
+    content: url("./images/main/offer/deco-offer2.svg");
     right: 0;
     bottom: 0;
   }
