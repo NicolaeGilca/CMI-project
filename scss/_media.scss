@@ -1,4 +1,6 @@
 @media only screen and (max-width: 990px) {
+
+
   .steps {
     .steps__top {
       display: flex;
@@ -11,8 +13,18 @@
 
 @media only screen and (max-width: 880px) {
 
+  html, body {
+    overflow-x: hidden;
+  }
+
   .header {
-    position: relative;
+    .header__container {
+      top: 0;
+      padding: 1rem 1rem;
+      position: fixed;
+      width: 100%;
+      background-color: var(--second-bg-color);
+    }
     nav {
       .header__menu {
         display: block;
@@ -68,22 +80,21 @@
     }
 
     .header__list {
-      display: none;
+      display: flex;
       transform: translateX(100%);
       z-index: 1;
       position: absolute;
       right: 0;
       top: 0;
       width: 50%;
-      height: 100vh;
-      display: flex;
+      min-height: 110vh;
       flex-direction: column;
       align-items: flex-start;
-      padding: 5rem 5rem 3rem 3rem;
-      font-size: 32px;
+      padding: 7rem 3rem;
+      font-size:3rem;
       background-color: silver;
       transition: 0.2s ease-in;
-
+      gap: 2rem;
       &.active {
         transition: 0.2s ease-in;
         transform: translateX(0);
@@ -179,6 +190,7 @@
       padding-bottom: 2rem;
     }
   }
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -223,9 +235,13 @@
         width: 100%;
       }
     }
+    .footer__up-btn {
+      display: none;
+    }
   }
 }
 @media only screen and (max-width: 660px) {
+
   .header {
     .header__list-container {
       .header__list {
@@ -241,4 +257,51 @@
     }
   }
 
+  .works {
+  
+    .works__presetation-bottom {
+      flex-direction: column;
+      > div {
+      width: 100%;
+      }
+    }
+  }
+  .footer {
+  
+    gap: 2rem;
+    .footer__bottom-items {
+
+ 
+      .footer__bottom-logo {
+        display: none;
+      }
+    }
+  }
+
+
+
+}
+
+@media only screen and (max-width: 500px) {
+  footer.footer {
+    .footer__bottom-items {
+      position: relative;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 1rem;}
+
+      .footer__bottom-logo {
+        display: block !important; 
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .footer__up-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      } 
+  }
 }

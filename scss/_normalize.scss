@@ -14,13 +14,16 @@
   --text-color: #474747;
   --bg-color: #fff;
 }
+.hidden {
+  display: none
+}
 
 * img {
   max-width: 100%;
 }
 ._container {
   max-width: 100%;
-  width: 1200px;
+  width: 1250px;
   margin: 0 auto;
   padding: 0 25px;
 }
@@ -114,11 +117,11 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-html,body {
+html, body {
   color: var(--text-color);
   font-family: "Roboto", serif;
-  overflow-x: hidden;
   background-color: var(--bg-color);
+
 }
 
 /**

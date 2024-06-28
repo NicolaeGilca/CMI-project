@@ -2,19 +2,17 @@
 @import "scss/media";
 //header section
 
-.hidden {
-  display: none
-}
+
 
 .header {
   position: sticky;
   top: 0;
-  padding: 1rem;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   gap: 3rem;
   background-color: var(--second-bg-color);
-  z-index:9;
+  z-index:99;
 
   &__container {
     display: flex; 
@@ -99,13 +97,11 @@
 
   //haeader description
   .welcome {
-    
-    position: relative;
     background-color: var(--second-bg-color);
     z-index: 1;
   &::after {
     position: absolute;
-    content: url("./images/header/deco/welcome-deco.svg");
+    content: url("/images/header/deco/welcome-deco.svg");
     right: 0;
     bottom: 0;
     z-index: 0;
@@ -475,7 +471,7 @@ main {
   }
   &::after{
     position: absolute;
-    content: url("./images/main/offer/deco-offer2.svg");
+    content: url("/images/main/offer/deco-offer2.svg");
     right: 0;
     bottom: 0;
   }
@@ -770,7 +766,8 @@ main {
     gap: 0.5rem;
   }
   &__bottom-title {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;color: var(--accent-color);
   }
 
   &__bottom-items {
