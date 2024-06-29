@@ -13,9 +13,7 @@
 
 @media only screen and (max-width: 880px) {
 
-  html, body {
-    overflow-x: hidden;
-  }
+
 
   .header {
     .header__container {
@@ -214,10 +212,11 @@
   .testiomonials {
     .testiomonials__opinion-list {
       flex-direction: column;
+      position: relative;
     }
     .testiomonials__deco-bg {
-      transform: translate(-50%, 50%); 
-
+      position: absolute;
+      top: 50%;
     }
   }
 
@@ -283,6 +282,18 @@
 }
 
 @media only screen and (max-width: 500px) {
+
+  .header {
+    .header__nav-btn {
+      display: none;
+    }
+  }
+  .testiomonials {
+  
+    .testiomonials__deco-bg {
+      display: none;
+    }
+  }
   footer.footer {
     .footer__bottom-items {
       position: relative;
@@ -304,4 +315,18 @@
         bottom: 0;
       } 
   }
+}
+
+@media only screen and (max-width: 400px) {
+
+  .header {
+    .header__nav {
+      .header__nav-btn {
+        i {
+          display: none;
+        }
+      }
+    }
+  }
+  
 }

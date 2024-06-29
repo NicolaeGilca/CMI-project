@@ -5,19 +5,21 @@
 
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   gap: 3rem;
   background-color: var(--second-bg-color);
-  z-index:99;
-
+  z-index: 99;
+  width: 100%;
+  margin-bottom: 5rem;
   &__container {
-    display: flex; 
+    padding: 1rem 1rem;
+    display: flex;
     justify-content: space-between;
-    padding: 0 clamp(0.625rem, 0.08rem + 2.73vw, 2.5rem);
+    gap: 1rem;
+    
   }
 
   &__nav {
@@ -25,7 +27,7 @@
     font-weight: 400;
     display: flex;
     align-items: center;
-    gap: 1rem;
+ gap: 3rem;
     justify-content: space-between;
   }
 
@@ -36,7 +38,7 @@
   }
 
   &__logo {
-   
+
     img {
       border-radius: 50px;
       width: 3.5rem;
@@ -69,7 +71,7 @@
     .item-contact {
       font-size: 1.3rem;
     }
- 
+
   }
 
   &__nav-btn {
@@ -89,62 +91,49 @@
       color: var(--second-bg-color);
     }
   }
+
   .header__menu {
     font-size: 2rem;
     display: none;
   }
 }
 
-  //haeader description
-  .welcome {
-    background-color: var(--second-bg-color);
-    z-index: 1;
+//haeader description
+.welcome {
+  position: relative;
+  padding-top: 9rem;
+  background-color: var(--second-bg-color);
+  z-index: 1;
+
   &::after {
     position: absolute;
     content: url("/images/header/deco/welcome-deco.svg");
     right: 0;
-    bottom: 0;
+    top: 6rem;
     z-index: 0;
   }
+
   &__container {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10rem;
-    
+
 
   }
 
   &__picture {
-   
-    position: relative;
-    width: 40%;
     max-width: 100%;
-    
+   width: 90rem;
+    display: block;
+z-index: 3;
 
-    img {
-      width: 40vw;
-
-    }
-  
-    
-    .welcome__img-deco {
-      img {
-    transform: rotate(345deg);
-        
-      }
-    }
-
-    .welcome__img-worker {
-      position: absolute;
-      z-index: 3;
-      top: 0;
-    }
+img {
+  width: 100%;
+}
   }
 
   &__desc {
-   width: 60%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -153,7 +142,7 @@
 
   &__desc-title {
     font-weight: 600;
-    font-size:3.5rem;
+    font-size: 3.5rem;
     margin-bottom: 30px;
 
     span {
@@ -172,21 +161,23 @@
   }
 
   &__desc-btn {
-  @include btn-standart;
+    @include btn-standart;
   }
-  &__desc-btn-first {
-  }
+
+  &__desc-btn-first {}
+
   &__desc-btn-second {
     @include btn-second-standart;
   }
+
   .welcome__btn-item {
     display: flex;
     gap: 1rem;
   }
 
-.item-contact {
-  font-size: 20px;
-}
+  .item-contact {
+    font-size: 20px;
+  }
 }
 
 //main
@@ -299,7 +290,7 @@ main {
   }
 
   &__desc {
-    padding-left: 2rem ;
+    padding-left: 2rem;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -323,13 +314,12 @@ main {
   }
 
   &__desc-buttons {
-  
+
     display: flex;
     gap: 1.5rem;
   }
 
-  &__main-picture {
-  }
+  &__main-picture {}
 
   &__btn-quote {
     display: flex;
@@ -337,6 +327,7 @@ main {
     @include btn-standart;
     border-radius: 50px;
     border: none;
+
     i {
       margin-left: 0.5rem;
     }
@@ -380,6 +371,7 @@ main {
 
 .steps {
   position: relative;
+
   &::after {
     content: url("/images/main/steps/steps-deco.svg");
     right: 0;
@@ -387,27 +379,28 @@ main {
     position: absolute;
     z-index: -1;
   }
+
   &__title {
     padding: 1rem 0;
   }
-  &__btns {
 
-  }
+  &__btns {}
+
   &__btn-quote {
     @include btn-standart;
     border-radius: 3rem
-
   }
-  
+
   &__btn-learn {
     @include btn-second-standart;
     border-radius: 3rem
   }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 2rem ;
+    padding-bottom: 2rem;
   }
 
   &__bottom {
@@ -445,12 +438,14 @@ main {
     max-width: 100%;
     width: 80rem;
     z-index: 9;
+
     img {
       width: 100%;
-     
+
     }
   }
 }
+
 //offer section 
 
 .offer {
@@ -461,21 +456,23 @@ main {
   background-color: #003466;
   color: white;
   margin: 2rem 0;
-  &::before{
+
+  &::before {
     position: absolute;
     content: url("/images/main/offer/deco-offer.svg");
     left: 0;
     bottom: 0;
 
-  
+
   }
-  &::after{
+
+  &::after {
     position: absolute;
     content: url("/images/main/offer/deco-offer2.svg");
     right: 0;
     bottom: 0;
   }
- 
+
 
   &__container {
     display: flex;
@@ -503,22 +500,24 @@ main {
     @include btn-second-standart;
     color: white;
     border: 2px solid white;
-    
+
   }
 }
+
 //news section 
 .news {
-  
-  background-color:var(--second-bg-color);
+
+  background-color: var(--second-bg-color);
 
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   &__btn {
     @include btn-standart;
-    padding:10px 20px;
+    padding: 10px 20px;
 
   }
 
@@ -526,15 +525,13 @@ main {
     padding: 2rem 0;
   }
 
-  &__bottom {
-    
-  }
+  &__bottom {}
 
   &__list {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
     gap: 2rem;
   }
 
@@ -546,16 +543,16 @@ main {
     flex-direction: column;
     gap: 0.5rem;
     background-color: var(--bg-color);
-    
+
   }
 }
 
 .item-card {
-  
+
   &__img {
     img {
       width: 100%;
-    object-fit: cover;
+      object-fit: cover;
 
     }
   }
@@ -566,7 +563,7 @@ main {
     font-weight: 500;
     display: flex;
     flex-direction: column;
-    gap:1.5rem;
+    gap: 1.5rem;
   }
 
   &__date {
@@ -591,7 +588,7 @@ main {
 //testionials section
 
 .testiomonials {
- 
+
 
 
   &__title {
@@ -616,6 +613,7 @@ main {
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
     background-color: white;
   }
+
   &__deco-bg {
     position: absolute;
     content: "";
@@ -632,6 +630,7 @@ main {
     gap: 3rem;
   }
 }
+
 .opinion-item {
   max-width: 500px;
 
@@ -734,6 +733,7 @@ main {
       cursor: pointer;
     }
   }
+
   .footer__bottom-side {
     text-align: center;
 
@@ -743,31 +743,37 @@ main {
     }
   }
 
-/////// bottom-side
-/// 
+  /////// bottom-side
+  /// 
   &__bottom-logo {
-   display: flex;
-   flex-direction: column;
-   gap: 0.5rem;
-   align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+
     img {
       border-radius: 50px;
     }
+
     width: 5rem;
     height: 5rem;
   }
+
   &__logo-title {
     font-size: 14px;
   }
+
   &__bottom-list {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     gap: 0.5rem;
   }
+
   &__bottom-title {
     margin-bottom: 0.5rem;
-    font-weight: 700;color: var(--accent-color);
+    font-weight: 700;
+    color: var(--accent-color);
   }
 
   &__bottom-items {
@@ -781,17 +787,19 @@ main {
 
 
     i {
-    transition: 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
 
-    background-color: var(--accent-color);
-    padding: 1rem;
-    &:hover {
-      background-color: var(--text-color);
+      background-color: var(--accent-color);
+      padding: 1rem;
+
+      &:hover {
+        background-color: var(--text-color);
+      }
     }
-    }
+
     cursor: pointer;
     font-size: 26px;
-  
+
   }
 
 
@@ -805,8 +813,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
   }
+
   &__list-contacts {
     display: flex;
     align-items: center;
@@ -818,37 +827,42 @@ main {
 
 //animation 
 @keyframes appear {
-  
-  from{
+
+  from {
     opacity: 0;
     scale: 0.5;
-  } to {
+  }
+
+  to {
     opacity: 1;
     scale: 1;
   }
 }
 
 @keyframes leftToRight {
-  
-  from{
+
+  from {
     opacity: 0;
     transform: translateX(-100%);
-  } to {
+  }
+
+  to {
     opacity: 1;
     transform: translateX(0%);
 
   }
 }
+
 @keyframes rightToLeft {
-  
-  from{
+
+  from {
     opacity: 0;
     transform: translateX(100%);
-  } to {
+  }
+
+  to {
     opacity: 1;
     transform: translateX(0%);
 
   }
 }
-
-
